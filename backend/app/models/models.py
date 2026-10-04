@@ -26,6 +26,13 @@ class Candidate(Base):
     ticket_no: Mapped[str] = mapped_column(String(32))
     paper_id: Mapped[int] = mapped_column(ForeignKey("paper_sets.id"))
 
+class DamagedSeat(Base):
+    __tablename__ = "damaged_seats"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    hall_id: Mapped[int] = mapped_column(ForeignKey("halls.id"))
+    row: Mapped[int] = mapped_column(Integer)
+    col: Mapped[int] = mapped_column(Integer)
+
 class SeatPlan(Base):
     __tablename__ = "seat_plans"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)

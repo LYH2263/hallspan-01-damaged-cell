@@ -24,6 +24,8 @@ onMounted(async () => {
   </div>
   <div class="card" v-if="unplaced.length">
     <h3>未排上</h3>
-    <div v-for="u in unplaced" :key="u.id">{{ u.name }}（{{ u.ticket_no }}）</div>
+    <div v-for="u in unplaced" :key="u.id">
+      {{ u.name }}（{{ u.ticket_no }}）<span v-if="u.reason" class="muted">— {{ u.reason }}</span>
+    </div>
   </div>
 </template>

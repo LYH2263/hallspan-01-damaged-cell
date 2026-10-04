@@ -128,6 +128,10 @@ h1 {
   background: transparent; border-style: dashed; color: var(--hs-muted);
   box-shadow: none;
 }
+.hs-desk.damaged {
+  background: repeating-linear-gradient(45deg, #cfc8b8 0 6px, #bdb5a3 6px 12px);
+  border: 2px solid #8a7a5a; color: #6a5f4a; box-shadow: none;
+}
 .hs-desk.hs-viol {
   border-color: var(--hs-bad);
   background: #fde8e6;
@@ -182,3 +186,12 @@ th { color: var(--hs-muted); font-weight: 700; font-size: 0.78rem; }
 }
 .seat.empty { background: transparent; border-style: dashed; color: var(--hs-muted); }
 .seat.bad { border-color: var(--hs-bad); background: #fde8e6; }
+.seat { cursor: pointer; }
+.seat.damaged {
+  background: repeating-linear-gradient(45deg, #cfc8b8 0 5px, #bdb5a3 5px 10px);
+  border-color: #8a7a5a; color: #6a5f4a;
+}
+.hs-err {
+  color: var(--hs-bad); font-size: 0.82rem; margin: 0.5rem 0 0;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+}
